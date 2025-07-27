@@ -4,6 +4,7 @@
 **A Python-Flask-based web interface** for managing firewall rules and monitoring suspicious traffic. This application allows users to block IP addresses and ports, monitor live logs, and initiate a background firewall engine that simulates rule enforcement.
 
 **📌 Features**
+
 •	✅ Web-based GUI using Flask
 
 •	✅ Add & manage blocked IP addresses
