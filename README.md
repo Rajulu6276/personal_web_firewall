@@ -5,15 +5,24 @@
 
 **📌 Features**
 •	✅ Web-based GUI using Flask
+
 •	✅ Add & manage blocked IP addresses
+
 •	✅ Add & manage blocked ports
+
 •	✅ View real-time firewall logs (last 3 entries on dashboard)
+
 •	✅ Persistent rule storage using JSON
+
 •	✅ Background firewall engine to simulate active blocking
+
 •	✅ Secure and lightweight local server
+
 •	✅ Automatic log updates
+
 •	✅ Extensible design for real-world firewall integration
-🛠️ Tools & Technologies Used
+
+**🛠️ Tools & Technologies Used**
 •	Python 3.x
 •	Flask – lightweight web framework
 •	Threading – to run firewall logic in the background
