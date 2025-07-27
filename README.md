@@ -24,14 +24,22 @@
 
 **🛠️ Tools & Technologies Used**
 •	Python 3.x
+
 •	Flask – lightweight web framework
+
 •	Threading – to run firewall logic in the background
+
 •	JSON – rule storage
+
 •	HTML/CSS – front-end interface
+
 •	firewall.py – core rule processor (custom module)
+
 •	rules.json – stores all active blocked rules
+
 •	firewall_log.txt – logs blocked access attempts
-🚀 Installation
+
+**🚀 Installation**
 ```bash
 git clone https://github.com/Rajulu6276/firewall-web-app.git
 cd firewall-web-app
@@ -50,11 +58,14 @@ python app.py
 **Logging**: Detected attempts to blocked ports or IPs are logged in firewall_log.txt. Latest 3 logs appear on the web UI.
 
 
-📄 Sample Log Output
+**📄 Sample Log Output**
 Blocked Port: 443
+
 Blocked IP: 8.8.8.8
+
 Blocked Port: 80
-📝 View complete logs in: firewall_log.txt
+
+**📝 View complete logs in: firewall_log.txt(default)**
 **🧾 Sample Rule File (rules.json)**
 {
     "blocked_ips": [
