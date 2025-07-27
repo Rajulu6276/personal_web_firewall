@@ -33,8 +33,14 @@ python app.py
 **Web Interface**: Flask UI serves a dashboard to view and manage rules.
 
 **Rules Management**: Users can add IP addresses or port numbers to block. These are saved to rules.json.
+
+
 **Firewall Engine (Background Task)**: When "Start Firewall" is clicked, a background thread runs from firewall.py, simulating detection of traffic and enforcing blocks by logging attempts.
+
+
 **Logging**: Detected attempts to blocked ports or IPs are logged in firewall_log.txt. Latest 3 logs appear on the web UI.
+
+
 📄 Sample Log Output
 Blocked Port: 443
 Blocked IP: 8.8.8.8
