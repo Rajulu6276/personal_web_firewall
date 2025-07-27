@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Web Firewall</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: url('/static/bg1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 { color: #f0ebeb; }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 20px;
+        }
+        form {
+            margin-bottom: 15px;
+        }
+        .log-box {
+            background: #450b7f;
+            color: #f0ebeb;
+            padding: 15px;
+            height: 100px;
+            overflow-y:scroll;
+            border: 1px solid #fefbfb;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+        }
+       li {
+        color: white; /* 👈 Add this line */
+        padding: 5px 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+}
+
+        .start-button {
+            background: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>🛡️ Python Web Firewall Dashboard</center></h1>
+
+    <form action="/add_ip" method="post">
+        <input  name="ip" placeholder="Enter IP to block" required />
+        <button>Add IP</button>
+    </form>
+
+    <form action="/add_port" method="post">
+        <input name="port" placeholder="Enter Port to block" required />
+        <button>Add Port</button>
+    </form>
+
+    <a href="/start"><button class="start-button">Start Firewall</button></a>
+
+    <h1 color="white"><b>Blocked IPs</b></h1>
+    <ul>
+        {% for ip in rules.blocked_ips %}
+        <li>🚫 {{ ip }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Blocked Ports</h1>
+    <ul>
+        {% for port in rules.blocked_ports %}
+        <li>🔒 {{ port }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>📄 Latest Logs</h1>
+    <div class="log-box">
+        {% for line in logs %}
+        <div>{{ line.strip() }}</div>
+        {% endfor %}
+    </div>
+</body>
+</html>
